@@ -1,0 +1,1 @@
+node-gyp clean configure build --target=4.0.0-beta.4 --verbose --arch=ia32 --dist-url=https://atom.io/download/electron

@@ -11,6 +11,18 @@
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
 
+    Message from native module :
+    <script>
+      try{
+        var path = require('path')
+        var nativeModule = require(path.join(process.execPath, '../../testnative'))
+        document.write(nativeModule.start())
+      } catch (e) {
+        console.error(e)
+        document.write(e)
+      }
+    </script>
+
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
